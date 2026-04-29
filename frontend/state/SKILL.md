@@ -3,6 +3,14 @@
 ## 职责
 组件状态、全局状态、持久化的管理。
 
+## 快速路由
+
+| 关键词 | 加载 L4 |
+| --- | --- |
+| localStorage、持久化 | `state/localStorage/` |
+| Context、跨组件共享 | `state/context/` |
+| Zustand、状态不更新 | `state/debug/` |
+
 ---
 
 ## 状态方案选择
@@ -13,8 +21,6 @@
 | 组件间共享、不需持久化 | `useContext` |
 | 需要持久化到本地 | `useLocalStorageState` |
 | 复杂状态机 | `useReducer` |
-
----
 
 ## 现有状态管理
 
@@ -35,7 +41,6 @@
 ---
 
 ## 注意事项
-
 - **不要滥用全局状态**：只在确实需要跨组件共享时用 Context
 - **localStorage 只存必要数据**：用户设置、进度、笔记
 - **阅读进度用 CFI 格式**：不是页码，保证精度

@@ -7,30 +7,34 @@
 
 ## 组件目录
 
-`src/features/books/components/` — 书籍相关组件
-`src/features/user/components/` — 用户相关组件
-`src/shared/utils/common/` — 通用 UI 组件（Toast、Loading 等）
+- `src/features/books/components/` — 书籍相关组件
+- `src/features/user/components/` — 用户相关组件
+- `src/shared/utils/common/` — 通用 UI 组件（Toast、Loading 等）
 
 ---
 
 ## 组件类型参考
 
-### 容器型组件
-- 持有状态，管理子组件
-- 如 `EPUBReader.tsx` — 阅读器主容器
+| 类型 | 说明 | 命名示例 |
+| --- | --- | --- |
+| 容器型 | 持有状态，管理子组件 | `EPUBReader.tsx` |
+| 展示型 | 纯接收 props，渲染 UI | `BookCard.tsx` |
+| 弹窗/抽屉型 | 弹窗 `XxxTanChuang` · 抽屉 `XxxChouTi` | `MuLuChouTi.tsx`、`BiJiChouTi.tsx` |
+| 表单型 | 用户输入、提交 | `EPUBDaoRuTanChuang.tsx` |
 
-### 展示型组件
-- 纯接收 props，渲染 UI
-- 如 `BookCard.tsx` — 书籍卡片
+---
 
-### 弹窗/抽屉型
-- `XxxTanChuang.tsx` — 弹窗
-- `XxxChouTi.tsx` — 抽屉面板
-- 如 `MuLuChouTi.tsx`（目录抽屉）、`BiJiChouTi.tsx`（笔记抽屉）
+## L4 子模块路由
 
-### 表单型
-- 用户输入、提交
-- 如 `EPUBDaoRuTanChuang.tsx`（导入书籍表单）
+| 功能 | L4 路径 | 关键词 |
+| --- | --- | --- |
+| 弹窗/对话框 | `components/modal/` | Dialog、Modal、弹窗 |
+| 抽屉面板 | `components/drawer/` | Drawer、抽屉、ChouTi |
+| 表单 | `components/form/` | Form、表单、DatePicker、Calendar |
+| 列表/卡片 | `components/card/` | Card、List、Table、Grid、Pagination |
+| 按钮/选择器 | `components/button/` | Button、Select、Antd |
+| 页面级组件 | `components/page/` | SEO、页面标题、document.title |
+| 样式/布局 | `components/style/` | Tailwind、CSS、深色、响应式、间距 |
 
 ---
 
@@ -47,16 +51,6 @@
 ## 样式规范
 
 - 使用 Tailwind CSS
-- 深色模式：通过 `darkMode` prop 或 `dark:` 前缀
+- 深色模式：`dark:` 前缀
 - 响应式：`md:`、`lg:` 断点
-
----
-
-## L4 功能点
-
-| 功能 | L4 路径 |
-| --- | --- |
-| 弹窗/对话框 | `frontend/components/modal/` |
-| 抽屉面板 | `frontend/components/drawer/` |
-| 表单 | `frontend/components/form/` |
-| 卡片/列表 | `frontend/components/card/` |
+- 间距：Tailwind spacing scale
